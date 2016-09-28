@@ -12,7 +12,7 @@ window.addEventListener('click', function(e){
 function hasFixups(){
   var nodes = document.querySelectorAll('.commit-message .message');
   for(var i = 0, l = nodes.length; i !== l; i++){
-    if(/^(fixup|squash|wip|tmp)!/.test(nodes[i].innerText)) {
+    if(/^(fixup|squash|wip|tmp)!?/.test(nodes[i].innerText)) {
       return true;
     }
   }
